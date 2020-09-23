@@ -29,8 +29,9 @@
 	$local_names = array("localhost");
 
     $db = 	mysqli_connect("localhost", "root", "") or die(mysqli_error($db));
-    mysqli_select_db($db, "ap2") or die(mysqli_error($db));
-    
+		mysqli_select_db($db, "ap2") or die(mysqli_error($db));
+		mysqli_query($db, "SET NAMES 'UTF8'");
+
     error_reporting(E_ALL ^ E_DEPRECATED);
 
 
